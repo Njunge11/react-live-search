@@ -1,0 +1,32 @@
+{
+  "name": "react-live-search",
+  "version": "1.0.0",
+  "description": "Just demonstrating live search using REACT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Njunge11/react-live-search.git"
+  },
+  "keywords": [
+    "react",
+    "next.js",
+    "search"
+  ],
+  "author": "Njunge Njenga <njungedev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Njunge11/react-live-search/issues"
+  },
+  "homepage": "https://github.com/Njunge11/react-live-search#readme",
+  "dependencies": {
+    "next": "^9.0.7",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1"
+  }
+}
