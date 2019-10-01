@@ -1,7 +1,7 @@
 import axios from "axios";
 let source;
 const resources = {};
-const search = async query => {
+const queryMovies = async query => {
   if (source) {
     source.cancel();
   }
@@ -23,4 +23,4 @@ const search = async query => {
     }
   }
 };
-export default search;
+export default queryMovies;
