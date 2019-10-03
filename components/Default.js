@@ -1,6 +1,6 @@
 const image =
   "https://raw.githubusercontent.com/Significa/frontend-challenge/master/layout/2.Exports/2.Illustrations/illustration-empty-state.png";
-const IndexDefault = () => {
+const Default = () => {
   return (
     <div className="span-col-6 default-state">
       <div>
@@ -11,4 +11,5 @@ const IndexDefault = () => {
     </div>
   );
 };
-export default IndexDefault;
+
+export default Default;
