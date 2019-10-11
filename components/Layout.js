@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
 const withLayout = Page => props => {
+  console.log("the prop", props.url.query.id);
   return (
     <div>
       <Head>
@@ -9,8 +10,8 @@ const withLayout = Page => props => {
       </Head>
       <div className="container">
         <Header />
-        <Page />
       </div>
+      <Page />
     </div>
   );
 };

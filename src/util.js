@@ -1,7 +1,7 @@
 import axios from "axios";
 let source;
 const resources = {};
-const queryMovies = async query => {
+const queryMovies = async (query, type) => {
   if (source) {
     source.cancel();
   }
@@ -12,7 +12,7 @@ const queryMovies = async query => {
       return resources[query];
     }
     const res = await axios(query, { cancelToken: source.token });
-    const result = res.data.results;
+    const result = type === 1 ? res.data.Search : res.data;
     resources[query] = result;
     return result;
   } catch (error) {

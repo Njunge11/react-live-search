@@ -9,6 +9,12 @@ body {
   grid-gap: 20px;
   justify-content: center;
 }
+.search-bar-container {
+  margin-top: 20px;
+}
+.movies-container {
+  margin-top: 30px;
+}
 .span-col-6 {
   grid-column: span 6 / auto;
   width: 1180px;
@@ -56,7 +62,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 80vh;
 }
 .index-default-text-1 {
   text-align: center;
@@ -86,9 +92,164 @@ input:focus {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   color: white;
+  cursor: pointer;
 }
 
+.card:hover .card-img-overlay {
+  display: flex;
+}
 .card-img {
   width: 100%;
   border-radius: calc(0.25rem - 1px);
+}
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  display: none;
+  background: rgba(34, 42, 50, 0.9);
+}
+.heart-icon {
+  top: 0;
+  position: absolute;
+  right: 0;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  font-size: x-large;
+}
+.title {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+.year {
+  margin-left: 12px;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.movie-details {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+  color: white;
+  justify-content: center;
+}
+
+.span-col-2 {
+  grid-column: span 2 / auto;
+  width: 1180px;
+}
+
+.back-button:hover .back-button-hover {
+  display: inline;
+}
+.back-button:hover .back-button-hover {
+  display: inline;
+}
+.back-button:hover .back-button-normal {
+  display: none;
+}
+.back-button-hover {
+  display: none;
+}
+.back-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.col-width {
+  width: 590px;
+}
+.dot:after {
+  content: " \B7 ";
+  margin-right: 8px;
+}
+.time {
+  font-size: 20px;
+  color: #7a8c99;
+  vertical-align: middle;
+}
+.rated {
+  border: 1px solid;
+  border-radius: 3px;
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  vertical-align: middle;
+  background: #7a8c99;
+  color: #000;
+}
+
+.title-display {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.description {
+  padding-top: 20px;
+  width: 500px;
+}
+
+.text-color {
+  color: #7a8c99;
+}
+
+.label {
+  border: solid 1px #353f4c;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-radius: 3px;
+  margin-right: 16px;
+}
+.imdb-rating {
+  margin-right: 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.imdb-logo-container {
+  background: #f99f1e;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.imdb-logo {
+  vertical-align: middle;
+}
+.rotten {
+  background: #f64040 !important;
+}
+
+.movie-particulars {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+}
+ul {
+  list-style: none;
+  margin-left: -38px;
+}
+
+.poster {
+  float: right;
+}
+
+.poster-image {
+  border-radius: 5px;
 }

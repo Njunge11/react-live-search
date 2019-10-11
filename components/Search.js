@@ -11,8 +11,8 @@ const Search = () => {
   const [theme, setTheme] = useContext(ThemeContext);
   async function queryForMovies(queryText) {
     setValue(queryText);
-    const url = `${publicRuntimeConfig.apiURL}?query=${queryText}&api_key=${apiKey}`;
-    const movies = await queryMovies(url);
+    const url = `${publicRuntimeConfig.apiURL}?s=${queryText}&page=1&apikey=${apiKey}`;
+    const movies = await queryMovies(url, 1);
     setMovies(movies || []);
     setTheme({
       loadSpinner: false,
@@ -22,17 +22,19 @@ const Search = () => {
     });
   }
   return (
-    <div className="span-col-6">
-      <div className="search-container">
-        <img className="search-image" src={searchImage} />
-        <input
-          value={value}
-          className="search-box"
-          type="search"
-          name="search"
-          placeholder="Search movies..."
-          onChange={event => queryForMovies(event.target.value)}
-        ></input>
+    <div className="container search-bar-container">
+      <div className="span-col-6">
+        <div className="search-container">
+          <img className="search-image" src={searchImage} />
+          <input
+            value={value}
+            className="search-box"
+            type="search"
+            name="search"
+            placeholder="Search movies..."
+            onChange={event => queryForMovies(event.target.value)}
+          ></input>
+        </div>
       </div>
     </div>
   );

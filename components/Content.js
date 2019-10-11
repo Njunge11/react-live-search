@@ -11,7 +11,11 @@ const Content = () => {
           // load cards
         } else if (themeHook[0].loadCards) {
           // load default content
-          return <Cards />;
+          return (
+            <div className="container movies-container">
+              <Cards />
+            </div>
+          );
         } else {
           return <Default />;
         }
