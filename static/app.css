@@ -253,3 +253,59 @@ ul {
 .poster-image {
   border-radius: 5px;
 }
+
+.btn,
+.btn-active {
+  display: inline-block;
+  border: solid 1px #353f4c;
+  border-radius: 3px;
+  text-decoration: none;
+  background: #0a1014;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 12px;
+  color: #7a8c99;
+  cursor: pointer;
+  line-height: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  outline: none;
+}
+.btn:hover {
+  border: solid 1px #ff4040;
+  color: #fff;
+}
+.btn:hover .heart-white {
+  /* border:solid 1px #FF4040; */
+  /* color:#fff; */
+  display: inline;
+}
+.btn:hover .heart {
+  display: none;
+}
+
+.btn-active {
+  background: #ff4040;
+  color: #fff;
+  display: inline;
+}
+.heart {
+  width: 16px;
+  vertical-align: middle;
+  padding-right: 4px;
+}
+.full-heart {
+  padding-right: 8px;
+}
+.heart-white {
+  width: 16px;
+  vertical-align: middle;
+  padding-right: 4px;
+  display: none;
+}

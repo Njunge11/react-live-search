@@ -11,6 +11,22 @@ import MovieRatings from "../../components/MovieRatings";
 import MovieParticulars from "../../components/MovieParticulars";
 import Poster from "../../components/Poster";
 
+function renderMovieDetails(movie) {
+  return (
+    <div className="movie-details">
+      <BackButton />
+      <div className="col-width">
+        <MovieLengthDetails movie={movie} />
+        <MovieTitle title={movie.Title} />
+        <MovieRatings ratings={movie.Ratings} />
+        <MoviePlot plot={movie.Plot} />
+        <MovieParticulars movie={movie} />
+      </div>
+      <Poster posterImage={movie.Poster} />
+    </div>
+  );
+}
+
 function Test() {
   const [movie, setMovie] = useState([]);
   const [loader, setLoader] = useState([]);
@@ -29,19 +45,7 @@ function Test() {
   }, [setMovie, setLoader]);
   if (!loader) {
     console.log("movie details ", movie);
-    return (
-      <div className="movie-details">
-        <BackButton />
-        <div className="col-width">
-          <MovieLengthDetails movie={movie} />
-          <MovieTitle title={movie.Title} />
-          <MovieRatings ratings={movie.Ratings} />
-          <MoviePlot plot={movie.Plot} />
-          <MovieParticulars movie={movie} />
-        </div>
-        <Poster posterImage={movie.Poster} />
-      </div>
-    );
+    return renderMovieDetails(movie);
   } else {
     return <h1>Loading</h1>;
   }
