@@ -1,7 +1,8 @@
+import TitleText from "./TitleText";
 const Genre = ({ genre }) => {
   return (
     <div>
-      <p className="text-color">Genre</p>
+      <TitleText title="Genre" />
       <ul>
         {genre
           ? genre.split(",").map((g, index) => {

@@ -1,7 +1,9 @@
+import TitleText from "./TitleText";
+
 const Cast = ({ cast }) => {
   return (
     <div>
-      <p className="text-color">Cast</p>
+      <TitleText title="Cast" />
       <ul>
         {cast
           ? cast.split(",").map((actor, index) => {

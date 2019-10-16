@@ -1,7 +1,8 @@
+import TitleText from "./TitleText";
 const Director = ({ director }) => {
   return (
     <div>
-      <p className="text-color">Director</p>
+      <TitleText title="Director" />
       <ul>
         {director
           ? director.split(",").map((d, index) => {
